@@ -1,0 +1,453 @@
+.header {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(240, 240, 240, 0.8));
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-item {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+:root {
+	--custom-yellow-color: #ffb031;
+	--custom-orrange-color: #fd9900;
+	--custom-pink-color: #fd6e8c;
+	--custom-peach-color: #ec7440;
+	--custom-black-color: #1e1e1e;
+}
+
+.applied-custom-black {
+	color: var(--custom-black-color);
+}
+
+.applied-custom-pink {
+	color: var(--custom-pink-color);
+}
+
+.applied-custom-yellow {
+	color: var(--custom-yellow-color);
+}
+
+.applied-custom-orrange {
+	color: var(--custom-orrange-color);
+}
+
+.applied-custom-peach {
+	color: var(--custom-peach-color);
+}
+
+.nav-link.active {
+	color: var(--custom-yellow-color) !important;
+}
+
+.i,
+.bi {
+	color: black !important;
+}
+
+img.rounded {
+	border-radius: 8px;
+}
+
+img.img-fluid {
+	object-fit: cover;
+}
+
+.navbar-custom {
+	display: flex;
+	padding: 8px 200px;
+	align-items: center;
+	gap: 16px;
+	width: 1920px;
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	padding: 8px 200px;
+	background-color: rgba(255, 255, 255, 0.7);
+	backdrop-filter: blur(10px);
+}
+
+.navlink-custom {
+	color: var(--Grays-Black, var(--Grays-Black, #000));
+	font-family: "Halvar Breitschrift";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 28px;
+}
+
+/* Footer */
+.product-name {
+	color: var(--custom-yellow-color);
+}
+
+.custom-top-content {
+	margin-top: 0;
+	position: relative;
+	width: 100%;
+}
+
+.custom-top-content .col-3 {
+	position: relative;
+}
+
+.custom-gradient-overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 70%;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 60%);
+	z-index: 1;
+}
+
+.slogan {
+	position: absolute;
+	padding-left: 10%;
+	padding-bottom: 10%;
+	z-index: 2;
+}
+
+.slogan h1 {
+	font-size: 80px !important;
+	font-style: normal;
+	font-weight: 550;
+	line-height: 105%;
+}
+
+/* Контект для карточек с категориями */
+.card-custom {
+	background-color: #f6f7f9;
+}
+
+.recipe-card {
+	border: none;
+	border-radius: 15px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	background-color: #f8f9fa;
+	overflow: hidden;
+}
+
+.recipe-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-image-wrapper {
+	position: relative;
+	width: 100%;
+	height: 300px; /* Фиксированная высота для всех изображений */
+	overflow: hidden;
+	border-radius: 8px;
+}
+
+.card-image-wrapper img {
+	width: 100%;
+	/* height: 100%; */
+	object-fit: cover; /* Важное свойство для корректного масштабирования */
+	object-position: center; /* Центрирование изображения */
+	transition: transform 0.3s ease;
+}
+
+.recipe-card:hover .card-image-wrapper img {
+	transform: scale(1.05);
+}
+
+.recipe-card .card-title {
+	color: var(--custom-black-color);
+	font-weight: 600;
+}
+
+.recipe-card .card-text {
+	color: #6c757d;
+}
+
+.recipe-card .btn {
+	border-radius: 8px;
+	padding: 12px 24px;
+	font-weight: 500;
+	transition: all 0.3s ease;
+}
+
+.recipe-card .btn:hover {
+	background-color: var(--custom-peach-color);
+	border-color: var(--custom-peach-color);
+	transform: translateY(-2px);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 865px) {
+	.slogan {
+		bottom: 20px; /* Прижимаем к низу */
+		left: 20px; /* Отступ слева */
+		right: 20px; /* Ограничиваем справа для лучшей читаемости */
+		z-index: 2;
+	}
+
+	.slogan h1 {
+		font-size: 80px !important;
+		line-height: 1.2;
+		margin-bottom: 10px;
+	}
+
+	/* Усиливаем градиент для лучшей читаемости текста */
+	.custom-gradient-overlay {
+		background: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0) 0%,
+			rgba(255, 255, 255, 0.9) 40%,
+			rgba(255, 255, 255, 1) 100%
+		);
+		height: 80%; /* Увеличиваем высоту градиента */
+	}
+}
+
+/* Дополнительные стили для еще меньших экранов */
+@media (max-width: 576px) {
+	.slogan {
+		bottom: 15px;
+		left: 15px;
+	}
+
+	.slogan h1 {
+		font-size: 40px !important;
+		margin-bottom: 5px;
+	}
+}
+
+@media (max-width: 768px) {
+	.recipe-card {
+		margin-bottom: 20px;
+	}
+
+	.card-image-wrapper {
+		height: 200px; /* Меньшая высота для мобильных устройств */
+	}
+}
+
+.blog-post {
+	line-height: 1.6;
+}
+
+.blog-post h1 {
+	color: #333;
+	margin-bottom: 2rem;
+}
+
+.blog-post h2,
+.blog-post h3 {
+	color: #444;
+	margin-top: 1.5rem;
+}
+
+.blog-content {
+	font-size: 1.1rem;
+}
+
+.blog-content ul {
+	margin-bottom: 1rem;
+}
+
+.blog-content li {
+	margin-bottom: 0.5rem;
+}
+
+.alert-info {
+	background-color: rgba(236, 116, 64, 0.1); /* Персиковый цвет с прозрачностью */
+	border-color: var(--custom-peach-color);
+	border-left: 4px solid var(--custom-peach-color);
+}
+
+.alert-info h4 {
+	color: var(--custom-peach-color);
+	font-weight: 600;
+}
+
+.alert-info ul {
+	color: var(--custom-black-color);
+}
+
+.card-custom .card-footer {
+	background: transparent;
+	border-top: none;
+	padding: 1rem;
+}
+
+.card-custom .btn {
+	transition: all 0.3s ease;
+}
+
+.card-custom .btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для кнопок и иконок */
+.btn {
+	padding: 0.5rem 1.25rem;
+	border-radius: 8px;
+	transition: all 0.3s ease;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+.btn-dark {
+	background-color: #212529;
+	border-color: #212529;
+	color: #fff;
+}
+
+.btn-dark .bi {
+	color: #ffffff !important;
+	font-size: 1.1rem;
+	line-height: 1;
+	display: flex;
+	align-items: center;
+}
+
+/* Стили для мобильного меню */
+.offcanvas .btn-dark {
+	width: 100%;
+	justify-content: center;
+}
+
+.btn-dark:hover {
+	background-color: var(--custom-peach-color);
+	border-color: var(--custom-peach-color);
+	transform: translateY(-2px);
+}
+
+/* Выравнивание текста и иконки в кнопке */
+.btn span {
+	line-height: 1;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* Стили для мобильного меню */
+@media (max-width: 768px) {
+	.navbar {
+		padding: 0.5rem 1rem;
+	}
+
+	.navbar-brand img {
+		max-height: 40px;
+	}
+
+	.navbar-nav {
+		background-color: #fff;
+		border-radius: 10px;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+		padding: 1rem;
+		margin-top: 0.5rem;
+	}
+
+	.nav-item {
+		margin: 0.5rem 0;
+		text-align: center;
+	}
+
+	.nav-link {
+		font-size: 1.1rem;
+		padding: 0.8rem 1rem;
+		border-radius: 8px;
+		transition: all 0.3s ease;
+	}
+
+	.nav-link:hover {
+		background-color: var(--custom-peach-color);
+		color: #fff !important;
+	}
+
+	.navbar-toggler {
+		border: none;
+		padding: 0.5rem;
+		margin-right: 0.5rem;
+	}
+
+	.navbar-toggler:focus {
+		box-shadow: none;
+		outline: none;
+	}
+
+	/* Стиль для кнопки выхода в мобильном меню */
+	.nav-item .btn-dark {
+		width: 100%;
+		margin: 0.5rem 0;
+	}
+}
+
+/* Стили для секции категорий */
+.category {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/* Стили для карточек */
+.category-cards {
+	margin: 0;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /* По умолчанию 4 колонки */
+	gap: 20px;
+}
+
+.card-custom {
+	height: 100%;
+}
+
+.card-custom .card-img-top {
+	height: 200px;
+	object-fit: cover;
+}
+
+/* Адаптивная сетка для экранов меньше 992px */
+@media (max-width: 991px) {
+	.category-cards {
+		grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+	}
+}
+
+/* Мобильная версия */
+@media (max-width: 576px) {
+	.category-cards {
+		grid-template-columns: 1fr; /* 1 колонка */
+	}
+
+	.category {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.category-cards > div {
+		margin-bottom: 20px;
+	}
+}
+
+/* Стили для нижнего блока на мобильных устройствах */
+@media (max-width: 571px) {
+	.alarm_to_action {
+		padding: 2rem 1rem !important; /* Уменьшаем padding */
+		min-height: auto !important; /* Убираем фиксированную высоту */
+		height: auto !important; /* Высота по контенту */
+	}
+
+	.alarm_to_action img {
+		display: none !important;
+	}
+
+	/* Стили для контейнера с текстом и кнопкой */
+	.alarm_to_action .position-absolute {
+		position: relative !important;
+		padding: 0 !important;
+	}
+
+	.alarm_to_action .w-50 {
+		width: 100% !important; /* Текст на всю ширину на мобильных */
+	}
+}
